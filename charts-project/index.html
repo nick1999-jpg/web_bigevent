@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化项目</title>
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/echarts.min.js"></script>
+    <script src="js/flexible.js"></script>
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/index.js"></script>
+    <!-- 想使用中国地图必须首先引入china.js文件 -->
+    <script src="js/china.js"></script>
+    <script src="js/myMap.js"></script>
+</head>
+
+<body>
+    <!-- 父容器 大盒子 -->
+    <div class="viewport">
+        <div class="column">
+            <div class="panel overview">
+                <div class="inner">
+                    <ul>
+                        <li>
+                            <h4>2,190</h4>
+                            <span>
+                                <i class="icon-dot"></i>
+                                设备总数
+                            </span>
+                        </li>
+                        <li>
+                            <h4>190</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #6acca3;"></i>
+                                设备总数
+                            </span>
+                        </li>
+                        <li>
+                            <h4>3,001</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #6acca3;"></i>
+                                设备总数
+                            </span>
+                        </li>
+                        <li>
+                            <h4>108</h4>
+                            <span>
+                                <i class="icon-dot" style="color: #ed3f35;"></i>
+                                设备总数
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 监控区域模块制作 -->
+            <div class="monitor panel">
+                <div class="inner">
+                    <div class="tab">
+                        <a href="javascript:;" class="bg"> 故障设备监控</a>
+                        <a href="javascript:;"> 异常设备监控</a>
+                    </div>
+                    <h4 class="first"><span>异常时间</span> <span>设备地址</span> <span>异常代码</span></h4>
+                    <div class="content">
+
+                        <ul>
+                            <li> <span>20180701</span> <span>北京市昌平区建材城西路金燕龙</span> <span>1000002</span></li>
+                            <li> <span>20190601</span> <span>北京市昌平区建材城西路金燕龙</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙</span> <span>1000002</span></li>
+                            <li> <span>20190701</span> <span>北京市昌平区建材城西路金燕龙</span> <span>1000002</span></li>
+                            <li> <span>20190701</span> <span>北京市昌平区建材城西路金燕龙</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙</span> <span>1000002</span></li>
+                        </ul>
+                    </div>
+                    <div class="content" style="display: none;">
+                        <ul>
+                            <li> <span>20190701</span> <span>北京市昌平区建材城西路金燕龙写</span> <span>1000002</span></li>
+                            <li> <span>20190703</span> <span>北京市昌平区建材城西路金燕龙写</span> <span>1000002</span></li>
+                            <li> <span>20190705</span> <span>北京市昌平区建材城西路金燕龙写</span> <span>1000002</span></li>
+                            <li> <span>20190706</span> <span>北京市昌平区建材城西路金燕龙写</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙写</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙写</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙写</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙写</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙写</span> <span>1000002</span></li>
+                            <li> <span>20190704</span> <span>北京市昌平区建材城西路金燕龙写</span> <span>1000002</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 点位分布统计模块 -->
+            <div class="panel point">
+                <div class="inner">
+                    <h3>点位分布统计</h3>
+                    <div class="chart">
+                        <div class="pie"></div>
+                        <div class="data">
+                            <div class="total">
+                                <h4>320,11</h4>
+                                <span><i class="icon-dot"></i>点位总数</span>
+                            </div>
+                            <div class="total">
+                                <h4>418</h4>
+                                <span><i class="icon-dot" style="color: #eacf19;"></i>本月新增</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <!--  地图模块 -->
+            <div class="map">
+                <h3> <span class="icon-cube"></span>设备数据统计</h3>
+                <div class="chart">
+                    <div class="geo"></div>
+                </div>
+            </div>
+            <div class="panel users">
+                <div class="inner">
+                    <h3>全国用户总量统计</h3>
+                    <div class="chart">
+                        <div class="bar"></div>
+                        <div class="data">
+                            <div class="num">
+                                <h3>120,899</h3>
+                                <span><i class="icon-dot"></i> 用户总量</span>
+                            </div>
+                            <div class="num">
+                                <h3>248</h3>
+                                <span><i class="icon-dot" style="color: #eacf19;"></i> 本月新增</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="panel order">
+                <div class="inner">
+                    <div class="day">
+                        <a href="javascript:;" class="abg">365天</a>
+                        <a href="javascript:;">90天</a>
+                        <a href="javascript:;">30天</a>
+                        <a href="javascript:;">24小时</a>
+                    </div>
+                    <div class="sell">
+                        <div class="item">
+                            <h3>20,301,987</h3>
+                            <span><i class="icon-dot"></i>订单量</span>
+                        </div>
+                        <div class="item">
+                            <h3>99834</h3>
+                            <span><i class="icon-dot" style="color: #d9ab14;"></i>销售额（万元）</span>
+                        </div>
+                    </div>
+                    <div class="sell" style="display: none;">
+                        <div class="item">
+                            <h3>301,987</h3>
+                            <span><i class="icon-dot"></i>订单量</span>
+                        </div>
+                        <div class="item">
+                            <h3>9834</h3>
+                            <span><i class="icon-dot" style="color: #d9ab14;"></i>销售额（万元）</span>
+                        </div>
+                    </div>
+                    <div class="sell" style="display: none;">
+                        <div class="item">
+                            <h3>1,987</h3>
+                            <span><i class="icon-dot"></i>订单量</span>
+                        </div>
+                        <div class="item">
+                            <h3>3,834</h3>
+                            <span><i class="icon-dot" style="color: #d9ab14;"></i>销售额（万元）</span>
+                        </div>
+                    </div>
+                    <div class="sell" style="display: none;">
+                        <div class="item">
+                            <h3>987</h3>
+                            <span><i class="icon-dot"></i>订单量</span>
+                        </div>
+                        <div class="item">
+                            <h3>834</h3>
+                            <span><i class="icon-dot" style="color: #d9ab14;"></i>销售额（万元）</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel sale">
+                <div class="inner">
+                    <div class="tj">
+                        <h3>销售额统计</h3>
+                        <a href="javascript:;" class="bgc" data-type='year'>年</a>
+                        <a href="javascript:;" data-type='quarter'>季</a>
+                        <a href="javascript:;" data-type='month'>月</a>
+                        <a href="javascript:;" data-type='week'>周</a>
+                    </div>
+                    <div class="chart">
+                        <div class="label">单位：万</div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap">
+                <div class="channel panel">
+                    <div class="inner">
+                        <h3>渠道分布</h3>
+                        <div class="chart"></div>
+                    </div>
+                </div>
+                <!--  销售进度模块 -->
+                <div class="quarter panel">
+                    <div class="inner">
+                        <h3>一季度销售进度</h3>
+                        <div class="chart">
+                            <div class="num">50<i style="font-size: 0.15rem;">%</i> </div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="data">
+                            <div class="box">
+                                <h3>1,321</h3>
+                                <span><i class="icon-dot"></i>销售额(万元)</span>
+                            </div>
+                            <div class="box">
+                                <h3>150%</h3>
+                                <span><i class="icon-dot" style="color: #ed3f35;"></i>同比增长</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 全国热榜模块 -->
+            <div class="top panel">
+                <div class="inner">
+                    <div class="all">
+                        <h3>全国热榜</h3>
+                        <ul>
+                            <li><i class="icon-cup1" style="color: #d93f36;"></i> 可爱多</li>
+                            <li><i class="icon-cup2" style="color: #68d8fe;"></i> 娃哈哈</li>
+                            <li><i class="icon-cup3"></i> 喜之郎</li>
+                        </ul>
+                    </div>
+                    <div class="province">
+                        <h3><span>各省热销</span><i>//近30日//</i></h3>
+                        <div class="rank">
+                            <ul class="hot">
+                                <!-- <li class="bg"><em>北京</em> <span>25, 179 <i class="icon-up"
+                                            style="color: #dc362e;"></i></span>
+                                </li>
+                                <li><em>河北</em> <span>23, 252 <i class="icon-down" style="color: #36be90;"></i></span>
+                                </li> -->
+
+                            </ul>
+                            <ul class="near">
+                                <!-- <li><em>可爱多</em><span>9,086 <i class="icon-up"></i></span></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
